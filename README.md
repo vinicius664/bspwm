@@ -95,15 +95,18 @@ echo ‘Loading initial ramdisk …’</pre>
 <pre>
 # sudo nano ~/.xinitrc OU sudo nano /etc/X11/xinit/xinitrc</pre>
 <pre>
-...<br>
-setxkbmap br &<br>
+...
+setxkbmap br &
 exec bspwm</pre>
 
 <h3>Abra o arquivo de configuração do bspwm:</h3>
 <pre># sudo nano ~/.config/bspwm/bspwmrc</pre>
 
 <h3>No inicio do arquivo de configuração adicione a seguinte linha:</h3>
-<pre>sxhkd &</pre>
+<pre>
+sxhkd &
+wmname LG3D &
+</pre>
 
 <h3>Para o mouse aparecer, use o seguinte comando no inicio do arquivo de configuração bspwmrc:</h3>
 <pre>xsetroot -cursor_name left_ptr &</pre>
@@ -176,8 +179,9 @@ ela irá te levar até o 1. Já o “focus=on”, irá focar na janela, caso ten
 
 Também podemos adicionar “center=true”, para um programa com a regra floating abrir no centro da tela.
 </pre>
-<h3></h3>
-<h3></h3>
+
+<h1>Instalado os arquivos:</h1>
+<h3># git clone </h3>
 <h3></h3>
 <h3></h3>
 <h3></h3>
