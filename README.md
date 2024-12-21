@@ -63,16 +63,43 @@ echo ‘Loading initial ramdisk …’</pre>
 <h3>Resolver erro de tradução grub:</h3>
 <pre># sudo cp /usr/share/locale/en@quot/LC_MESSAGES/grub.mo /boot/grub/locale/en.mo</pre>
 
-<h1></h1>
+<h1>Instalando e configurando o bspwm</h1>
+
+<h3>/Instale o xorg:</h3>
+<pre># sudo pacman -S xorg xorg-server xorg-xinit</pre>
+
+<h3>Instale os drivers:</h3>
+<pre># pacman -Ss xf86-video</pre>
+
+<h3>Instalando:</h3>
+<pre># sudo pacman -S bspwm sxhkd xfce4-terminal</pre>
+
+<h3>Copiando os arquivos de configuração e criando os diretórios:</h3>
+<pre>
+# mkdir -p ~/.config/{bspwm,sxhkd}<br>
+# cp /usr/share/doc/bspwm/examples/bspwmrc ~/.config/bspwm<br>
+# cp /usr/share/doc/bspwm/examples/sxhkdrc ~/.config/sxhkd
+</pre>
+
+<h3>Inicializando o bspwm, pode editar o arquivo direto:</h3>
+<pre>
+# sudo nano /etc/X11/xinit/xinitrc
+</pre>
+
+<h3>Ou pode fazer uma cópia no seu diretório:</h3>
+<pre>
+# sudo cp /etc/X11/xinit/xinitrc ~/.xinitrc
+</pre>
+
+<h3>Adicione as seguintes linhas no final do xinitrc: </h3>
+<pre>
+# sudo nano ~/.xinitrc OU sudo nano /etc/X11/xinit/xinitrc</pre>
+<pre>
+...<br>
+setxkbmap br &<br>
+exec bspwm</pre>
 
 
-<h3></h3>
-<h3></h3>
-<h3></h3>
-<h3></h3>
-<h3></h3>
-<h3></h3>
-<h3></h3>
 <h3></h3>
 <h3></h3>
 <h3></h3>
