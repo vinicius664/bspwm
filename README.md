@@ -99,11 +99,83 @@ echo ‘Loading initial ramdisk …’</pre>
 setxkbmap br &<br>
 exec bspwm</pre>
 
+<h3>Abra o arquivo de configuração do bspwm:</h3>
+<pre># sudo nano ~/.config/bspwm/bspwmrc</pre>
 
-<h3></h3>
-<h3></h3>
-<h3></h3>
-<h3></h3>
+<h3>No inicio do arquivo de configuração adicione a seguinte linha:</h3>
+<pre>sxhkd &</pre>
+
+<h3>Para o mouse aparecer, use o seguinte comando no inicio do arquivo de configuração bspwmrc:</h3>
+<pre>xsetroot -cursor_name left_ptr &</pre>
+
+<h3>No arquivo sxhkdrc, faça a segunte edição:</h3>
+<pre>
+Onde tem:<br>
+super + Return
+urxvt<br>
+Modifique para:<br>
+super + Return
+xfce4-terminal
+</pre>
+<p>A tecla super é correspondente a tecla "Windows", e a tecla return corresponde a tecla "Enter".</p>
+<p>Então Windows + Enter: abre o xfce4-terminal.</p>
+
+<h3>Para iniciar o bspwm:</h3>
+<pre>
+# startx
+</pre>
+
+<h3>Configurações:</h3>
+<pre>
+Entendendo:
+#!/bin/sh
+
+sxhkd &
+(Os serviços que quiser que inicie junto com o WM, podem ser incluídos aqui.)
+
+bspc monitor -d I II III IV V VI VII VIII IX X
+(O nome das workspaces, pode renomear como quiser cada um deles)
+
+bspc config border_width 2
+bspc config window_gap 12
+bspc config split_ratio 0.52
+bspc config borderless_monocle true
+bspc config gapless_monocle true
+(Aqui vem as configurações das bordas e gaps.)
+
+bspc rule -a Gimp desktop=’^8’ state=floating follow=on
+bspc rule -a Chromium desktop=’^2’
+bspc rule -a mplayer2 state=floating bspc rule -a
+Kupfer.py focus=on bspc rule -a Screenkey manage=off
+(Regras para as janelas. É aqui que se define em qual workspace a janela será aberta, e o comportamento da mesma.)
+Podemos adicionar algumas configurações extras, como:
+
+bspc config focus_follows_pointer true
+(O foco da janela segue o cursor.)
+
+bspc config normal_border_color "#528588"
+bspc config focused_border_color "#dee3e0"
+bspc config presel_feedback_color “#2c3939”
+(Cores.)
+
+Regras.
+As regras podem ser confusas para alguns, então irei explicar seu funcionamento.
+Para definir uma regra para uma janela, você precisa saber o nome da sua classe, para descobrir isso, podemos usar o pacote xprop:
+
+$ xprop | awk '/WM_CLASS/{print $4}'
+Após rodar o comando, clique na janela que deseja saber a classe.
+
+Tendo o nome da sua classe, podemos começar a criar nossa regra. Vamos pegar o terminal st de exemplo:
+
+bspc rule -a st-256color desktop=‘^1’
+No exemplo acima, o terminal st irá abrir no desktop 1. Vamos continuar…
+
+bspc rule -a st-256color desktop=‘^1’ follow=on focus=on
+Uma coisa interessante do bspwm, é este “follow=on”, que se você estiver em um desktop diferente do 1,
+ela irá te levar até o 1. Já o “focus=on”, irá focar na janela, caso tenha várias janelas abertas no mesmo desktop.
+
+Também podemos adicionar “center=true”, para um programa com a regra floating abrir no centro da tela.
+</pre>
 <h3></h3>
 <h3></h3>
 <h3></h3>
