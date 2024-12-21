@@ -190,12 +190,41 @@ cp bspwm/backgrounds/*.jpg,.png usr/share/backgrounds/
 cp bspwm/fonts/*.ttf /usr/share/fonts/TTF/
 </pre>
 
+<h1>Instalando o polybar</h1>
+<pre># sudo pacman -S polybar</pre>
 
+<h3>Copie o exemplo de configuração:</h3>
+<pre>
+# mkdir ~./config/polybar
+# cp /usr/share/doc/polybar/examples/config.ini ~/.config/polybar
+</pre>
 
+<h3>Inicializando o polybar:</h3>
+<p>Crie um arquivo script executável contendo a lógica de inicialização em ~/.config/polybar/launch.sh:</p>
+<pre>
+# sudo nano ~/.config/polybar/launch.sh
+</pre>
+<p>No arquivo insira:</p>
+<pre>
+#!/bin/bash
+  
+#Termine instâncias de barras em execução
+killall -q polybar
 
-<h3></h3>
-<h3></h3>
-<h3></h3>
+#Espere até que os processos em execução sejam terminados
+while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
+
+#execute a Polybar, usando a configuração padrão ~/.config/polybar/config
+polybar NOMEDABARRADOPOLYBAR &
+
+echo "Polybar lançada..."
+</pre>
+
+<p>No bspwmrc insira o seguinte comando: </p>
+<pre>
+~/.config/polybar/launch.sh
+</pre>
+
 <h3></h3>
 <h3></h3>
 <h3></h3>
