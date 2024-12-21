@@ -181,8 +181,18 @@ Também podemos adicionar “center=true”, para um programa com a regra floati
 </pre>
 
 <h1>Instalado os arquivos:</h1>
-<h3># git clone </h3>
-<h3></h3>
+<pre># git clone https://github.com/vinicius664/bspwm.git</pre>
+
+<h3>Coloque os arquivos nos diretórios corretos:</h3>
+<pre>
+cd bspwm
+cp bspwm/backgrounds/*.jpg,.png usr/share/backgrounds/
+cp bspwm/fonts/*.ttf /usr/share/fonts/TTF/
+</pre>
+
+
+
+
 <h3></h3>
 <h3></h3>
 <h3></h3>
