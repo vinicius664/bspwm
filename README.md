@@ -222,7 +222,7 @@ echo "Polybar lançada..."
 
 <p>No bspwmrc insira o seguinte comando: </p>
 <pre>
-~/.config/polybar/launch.sh
+${HOME}/.config/polybar/launch.sh &
 </pre>
 
 <h3></h3>
