@@ -1,0 +1,2 @@
+# bspwm
+Config file
