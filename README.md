@@ -196,7 +196,7 @@ cp bspwm/fonts/*.ttf /usr/share/fonts/TTF/
 <h3>Copie o exemplo de configuração:</h3>
 <pre>
 # mkdir ~./config/polybar
-# cp /usr/share/doc/polybar/examples/config.ini ~/.config/polybar
+# cp /usr/share/doc/polybar/examples/config.ini ~/.config/polybar/config
 </pre>
 
 <h3>Inicializando o polybar:</h3>
