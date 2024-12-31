@@ -221,7 +221,7 @@ echo "Polybar lançada..."
 </pre>
 
 <p>Ative o script como inicializável:</p>
-<pre>sudo chmod -x ~/.config/polybar/launch.sh</pre>
+<pre>sudo chmod +x ~/.config/polybar/launch.sh</pre>
 
 <p>No bspwmrc insira o seguinte comando: </p>
 <pre>
