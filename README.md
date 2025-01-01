@@ -187,7 +187,9 @@ Também podemos adicionar “center=true”, para um programa com a regra floati
 <pre>
 cd bspwm
 cp bspwm/backgrounds/*.jpg,.png usr/share/backgrounds/
+sudo mkdir /usr/share/fonts/{TTF,OTF}
 cp bspwm/fonts/*.ttf /usr/share/fonts/TTF/
+cp bspwm/fonts/*.otf /usr/share/fonts/OTF/
 </pre>
 
 <h1>Instalando o polybar</h1>
