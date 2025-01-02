@@ -72,7 +72,7 @@ echo ‘Loading initial ramdisk …’</pre>
 <pre># pacman -Ss xf86-video</pre>
 
 <h3>Instalando:</h3>
-<pre># sudo pacman -S bspwm sxhkd xfce4-terminal</pre>
+<pre># sudo pacman -S bspwm sxhkd alacritty dmenu</pre>
 
 <h3>Copiando os arquivos de configuração e criando os diretórios:</h3>
 <pre>
@@ -118,10 +118,11 @@ super + Return
 urxvt<br>
 Modifique para:<br>
 super + Return
-xfce4-terminal
+alacritty
 </pre>
 <p>A tecla super é correspondente a tecla "Windows", e a tecla return corresponde a tecla "Enter".</p>
-<p>Então Windows + Enter: abre o xfce4-terminal.</p>
+<p>Então Windows + Enter: abre o alacritty.</p>
+<p>O Windows + Espaço: abre o dmenu.</p>
 
 <h3>Para iniciar o bspwm:</h3>
 <pre>
