@@ -41,7 +41,7 @@ font-4=font-logos:size=10;4
 font-5=Material Icons:size=13;6
 font-6=IPAGothic:size=11:antialias=true;3
 
-modules-left = launcher title workspaces bspwm
+modules-left = launcher title bspwm
 modules-center = xwindow
 modules-right = cpu filesystem keyboard  wlan eth pulseaudio time powermenu
 
@@ -54,8 +54,8 @@ override-redirect = false
                                     
 [module/launcher]
 type=custom/text
-content = 
-;content =  
+;content = 
+content =  
 ;content = 
 ;content =   
 content-font=0
