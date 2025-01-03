@@ -72,7 +72,7 @@ echo ‘Loading initial ramdisk …’</pre>
 <pre># pacman -Ss xf86-video</pre>
 
 <h3>Instalando:</h3>
-<pre># sudo pacman -S bspwm sxhkd alacritty dmenu</pre>
+<pre># sudo pacman -S bspwm sxhkd alacritty dmenu picom</pre>
 
 <h3>Copiando os arquivos de configuração e criando os diretórios:</h3>
 <pre>
@@ -106,6 +106,8 @@ exec bspwm</pre>
 <pre>
 sxhkd &
 wmname LG3D &
+picom --config ~/.config/picom/picom.conf &
+picom &
 </pre>
 
 <h3>Para o mouse aparecer, use o seguinte comando no inicio do arquivo de configuração bspwmrc:</h3>
@@ -231,21 +233,8 @@ echo "Polybar lançada..."
 ${HOME}/.config/polybar/launch.sh &
 </pre>
 
-<h3></h3>
-<h3></h3>
-<h3></h3>
-<h3></h3>
-<h3></h3>
-<h3></h3>
-<h3></h3>
-<h3></h3>
-<h3></h3>
-<h3></h3>
-<h3></h3>
-<h3></h3>
-<h3></h3>
-<h3></h3>
-<h3></h3>
-<h3></h3>
-
-
+<h3>Definindo wallpapers:</h3>
+<p>Use o feh para definir um wallpaper:</p>
+<pre>$ sudo pacman -S feh</pre>
+<p>Adicione o seguinte comando no bspwmrc:</p>
+<pre>feh --bg-scale /usr/share/backgrounds/Arch.png &</pre>
