@@ -61,7 +61,7 @@ content = 
 content-font=0
 content-foreground=${colors.color1}
 content-padding=1
-click-right = dmenu
+click-right = dmenu_run
 ;Use pacman -S dmenu
 
 ;==========================================================
