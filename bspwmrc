@@ -3,7 +3,7 @@
 wmname LG3D &
 ${HOME}/.config/polybar/scripts/launch.sh &
 xsetroot -cursor_name left_ptr &
-feh --bg-scale /usr/share/backgrounds/Arch.png
+feh --bg-scale /usr/share/backgrounds/Mountain.jpg
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 bspc monitor -d I II III IV V VI VII VIII IX X
