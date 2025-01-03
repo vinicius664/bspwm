@@ -460,7 +460,7 @@ ramp-volume-2 = " "
 label-muted =  
 label-muted-background = ${colors.background}
 label-muted-foreground = ${colors.color1}
-label-muted-padding = 1
+label-muted-padding = 2
 click-right = pavucontrol
 ;Use pacman -S pavucontrol
 
